@@ -1,0 +1,11 @@
+The problem with arrays is with their fixed size.
+We have to determine the size of the array beforehand which becomes unflexible.
+We cannot increase or decrease the size of the array in the runtime.
+The memory inside an array is allocated contiguosly. The array is made inside the stack memory.
+
+Linked list advantage over arrays?
+We need not declare the size beforehand.
+Linked list is a variable size data structure.
+It can grow or shrink on the basis of requirement.
+It is created inside the heap memory.
+Insertion and removal of elements is easier in linked list.
