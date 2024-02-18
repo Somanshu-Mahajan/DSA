@@ -1,3 +1,4 @@
+Linked lists stores the data of the same datatype.
 Linked lists are the containers with two blocks namely data and node.
 Data is the value and node is containing the memory address of next node.
 If there is no node it is pointing then the value of node becomes null.
