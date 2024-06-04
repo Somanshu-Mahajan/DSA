@@ -9,9 +9,9 @@ Linked lists in C,C++:
 In C you can create a structure. Create a variable with any datatype. Also create a pointer of its own type. So it is pointing towards itself. 
 Such a structure is called self-referential structure.
 For example: struct example{
-								int data;
+		int data;
                 struct example *next;
-						 };
+				 };
 
 In C++, you can use class for linked lists.
 Differnce between structure and class is, in structure everything by default is public and vice versa in class.
