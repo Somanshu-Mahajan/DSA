@@ -1,0 +1,9 @@
+# Ignore all .vscode folders
+.vscode/
+**/.vscode/
+
+# Ignore all .txt files
+*.txt
+
+# Ignore all .class files (compiled Java classes)
+*.class
