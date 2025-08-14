@@ -5,81 +5,82 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-class CodeChef {
+public final class Template{
     static class FastReader {
         BufferedReader br;
         StringTokenizer st;
-        public FastReader(){
+
+        public FastReader() {
             br = new BufferedReader(new InputStreamReader(System.in));
         }
-        String next(){
-            while(st == null || !st.hasMoreTokens()){
-                try{
+
+        String next() {
+            while (st == null || !st.hasMoreTokens()) {
+                try {
                     st = new StringTokenizer(br.readLine());
-                }catch (IOException e){
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
             return st.nextToken();
         }
-        int nextInt(){
+
+        int nextInt() {
             return Integer.parseInt(next());
         }
-        long nextLong(){
+
+        long nextLong() {
             return Long.parseLong(next());
         }
-        double nextDouble(){
+
+        double nextDouble() {
             return Double.parseDouble(next());
         }
-        String nextLine(){
+
+        String nextLine() {
             String str = "";
-            try{
+            try {
                 str = br.readLine().trim();
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
             return str;
         }
     }
-    static class FastWriter{
+
+    static class FastWriter {
         private final BufferedWriter bw;
-        public FastWriter(){
+
+        public FastWriter() {
             this.bw = new BufferedWriter(new OutputStreamWriter(System.out));
         }
+
         public void print(Object object) throws IOException {
             bw.append("" + object);
         }
+
         public void println(Object object) throws IOException {
             print(object);
             bw.append("\n");
         }
+
         public void close() throws IOException {
             bw.close();
         }
     }
 
     public static void main(String[] args) {
-        try{
+        try {
             FastReader in = new FastReader();
             FastWriter out = new FastWriter();
             int testcase = in.nextInt();
-
-            while(testcase-- > 0){
-                int n = in.nextInt();
-                int a[] = new int[2* n];
-
-                int flag = 0;
-
-                for(int i = 0 ; i < (2*n) ; i++){
-                    a[i] = in.nextInt();
-                    if(a[i] > )
-                }
-
-
+            while (testcase-- > 0) {
+                // your code goes here
             }
             out.close();
-        } catch (Exception e){
+        } catch (Exception e) {
             return;
         }
-    }  
+
+    }
 }

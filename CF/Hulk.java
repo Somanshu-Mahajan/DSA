@@ -5,108 +5,100 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-
-public final class HelpfulMaths{
-        static class FastReader {
+public final class Hulk {
+    static class FastReader {
         BufferedReader br;
         StringTokenizer st;
-        public FastReader(){
+
+        public FastReader() {
             br = new BufferedReader(new InputStreamReader(System.in));
         }
-        String next(){
-            while(st == null || !st.hasMoreTokens()){
-                try{
+
+        String next() {
+            while (st == null || !st.hasMoreTokens()) {
+                try {
                     st = new StringTokenizer(br.readLine());
-                }catch (IOException e){
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
             return st.nextToken();
         }
-        int nextInt(){
+
+        int nextInt() {
             return Integer.parseInt(next());
         }
-        long nextLong(){
+
+        long nextLong() {
             return Long.parseLong(next());
         }
-        double nextDouble(){
+
+        double nextDouble() {
             return Double.parseDouble(next());
         }
-        String nextLine(){
+
+        String nextLine() {
             String str = "";
-            try{
+            try {
                 str = br.readLine().trim();
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
             return str;
         }
     }
-    static class FastWriter{
+
+    static class FastWriter {
         private final BufferedWriter bw;
-        public FastWriter(){
+
+        public FastWriter() {
             this.bw = new BufferedWriter(new OutputStreamWriter(System.out));
         }
+
         public void print(Object object) throws IOException {
             bw.append("" + object);
         }
+
         public void println(Object object) throws IOException {
             print(object);
             bw.append("\n");
         }
+
         public void close() throws IOException {
             bw.close();
         }
     }
 
-    static boolean isNumber(char i){
-        if(i == '1' || i == '2' || i == '3'){
-            return true;
-        }
-        return false;
-    }
-    
     public static void main(String[] args) {
-        try{
+        try {
             FastReader in = new FastReader();
             FastWriter out = new FastWriter();
             // int testcase = in.nextInt();
-            // while(testcase-- > 0){
-                
+            // while (testcase-- > 0) {
+
             // }
 
-            String s = in.next();
-            int n = s.length();
+            int n = in.nextInt();
+            StringBuilder str = new StringBuilder();
 
-            int ones = 0, twos = 0, threes = 0;
-            for(int i = 0 ; i < n ; i += 2){
-                if(s.charAt(i) == '1'){
-                    ones++;
-                }else if(s.charAt(i) == '2'){
-                    twos++;
+            for(int i = 0 ; i < n ; i++){
+                if(i % 2 == 1){
+                    str.append("I love ");
                 }else{
-                    threes++;
+                    str.append("I hate ");
                 }
+
+                if(i == n - 1){
+                    str.append("it");
+                    break;
+                }
+                str.append("that ");
             }
 
-            StringBuilder str = new StringBuilder(n);
+            out.println(str);
 
-            for(int i = 0 ; i < ones ; i++){
-                str.append('1');
-                str.append('+');
-            }
-            for(int i = 0 ; i < twos ; i++){
-                str.append('2');
-                str.append('+');
-            }
-            for(int i = 0 ; i < threes ; i++){
-                str.append('3');
-                str.append('+');
-            }
-
-            out.println(str.subSequence(0, n));
             out.close();
-        } catch (Exception e){
+        } catch (Exception e) {
             return;
         }
     }
