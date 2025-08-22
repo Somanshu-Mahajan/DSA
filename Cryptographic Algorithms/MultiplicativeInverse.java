@@ -1,11 +1,10 @@
-import java.util.Scanner;
-
 public class MultiplicativeInverse{
     private int r1, r2, q, r, t1 = 0, t2 = 1, t;
+    private int a, m;
 
     public MultiplicativeInverse(int r1, int r2) {
-        this.r1 = r1;
-        this.r2 = r2;
+        this.r1 = this.a = r1;
+        this.r2 = this.m = r2;
     }
 
     public int gcd(){
@@ -38,7 +37,8 @@ public class MultiplicativeInverse{
         if(this.r1 == 1){
             // System.out.println("GCD : " + this.r1);
             // System.out.println("Mulitplicative Inverse : " + this.t1);
-            return this.t1;
+           int inverse = (this.t1 % m + m) % m;
+           return inverse;
         } else{
             // System.out.println("GCD : " + this.r1);
             this.t1 = -1;
@@ -46,20 +46,5 @@ public class MultiplicativeInverse{
         }
 
         return this.t1;
-    }
-
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-
-        int r1, r2;
-
-        System.out.print("Enter r1, r2 : ");
-        r1 = scan.nextInt();
-        r2 = scan.nextInt();
-
-        MultiplicativeInverse m = new MultiplicativeInverse(r1, r2);
-        m.gcd();
-
-        scan.close();
     }
 }

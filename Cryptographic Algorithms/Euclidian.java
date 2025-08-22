@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Euclidian {
     private int r1, r2, q, r;
     
@@ -31,19 +29,5 @@ public class Euclidian {
         // System.out.println("GCD : " + this.r1);
 
         return this.r1;
-    }
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-
-        int r1, r2;
-
-        System.out.print("Enter r1, r2 : ");
-        r1 = scan.nextInt();
-        r2 = scan.nextInt();
-
-        Euclidian e = new Euclidian(r1, r2);
-        e.gcd();
-
-        scan.close();
     }
 }
