@@ -8,7 +8,7 @@ public class ExtendedEuclidian {
         this.r2 = r2;
     }
 
-    public void gcd(){
+    public int gcd(){
         if(r1 < r2) {
             int temp = r1;
             r1 = r2;
@@ -41,6 +41,8 @@ public class ExtendedEuclidian {
         System.out.printf(" %-5d| %-5d| %-5s|", this.s1, this.s2, "-");
         System.out.printf(" %-5d| %-5d| %-5s|\n", this.t1, this.t2, "-");
         System.out.println("GCD : " + this.r1);
+
+        return this.r1;
     }
 
     public static void main(String[] args) {
